@@ -1,5 +1,5 @@
 {
-  "name": "tachyons-grid",
+  "name": "tachyons-grid-layout",
   "description": "CSS Grid module for Tachyons",
   "version": "0.1.0",
   "author": {
@@ -7,8 +7,8 @@
     "email": "bobak.art@gmail.com",
     "url": "https://github.com/bobek-balinek"
   },
-  "style": "src/tachyons-grid.css",
-  "main": "src/tachyons-grid.css",
+  "style": "src/tachyons-grid-layout.css",
+  "main": "src/tachyons-grid-layout.css",
   "files": [
     "src",
     "css"
@@ -19,7 +19,7 @@
     "css",
     "grid"
   ],
-  "repository": "tachyons-css/tachyons-grid",
+  "repository": "bobek-balinek/tachyons-grid-layout",
   "license": "ISC",
   "devDependencies": {
     "tachyons-cli": "^1.0.10",
@@ -27,9 +27,9 @@
   },
   "scripts": {
     "start": "npm run build:watch",
-    "build:css": "tachyons src/tachyons-grid.css > css/tachyons-grid.css",
-    "build:minify": "tachyons src/tachyons-grid.css --minify > css/tachyons-grid.min.css",
-    "build:docs": "tachyons src/tachyons-grid.css --generate-docs --package=../../package.json > readme.md",
+    "build:css": "tachyons src/tachyons-grid-layout.css > css/tachyons-grid-layout.css",
+    "build:minify": "tachyons src/tachyons-grid-layout.css --minify > css/tachyons-grid-layout.min.css",
+    "build:docs": "tachyons src/tachyons-grid-layout.css --generate-docs --package=../../package.json > readme.md",
     "build": "npm run build:css && npm run build:minify && npm run build:docs",
     "build:watch": "watch 'npm run build' ./src"
   }

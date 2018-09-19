@@ -1,4 +1,4 @@
-# tachyons-grid 0.1.0
+# tachyons-grid-layout 0.1.0
 
 CSS Grid module for Tachyons
 
@@ -13,7 +13,7 @@ bytes | selectors | declarations
 #### With [npm](https://npmjs.com)
 
 ```
-npm install --save-dev tachyons-grid
+npm install --save-dev tachyons-grid-layout
 ```
 
 Learn more about using css installed with npm:
@@ -24,12 +24,12 @@ Learn more about using css installed with npm:
 
 http:
 ```
-git clone https://github.com/tachyons-css/tachyons-grid
+git clone https://github.com/bobek-balinek/tachyons-grid-layout
 ```
 
 ssh:
 ```
-git clone git@github.com:tachyons-css/tachyons-grid.git
+git clone git@github.com:bobek-balinek/tachyons-grid-layout.git
 ```
 
 ## Usage
@@ -39,7 +39,7 @@ git clone git@github.com:tachyons-css/tachyons-grid.git
 Import the css module
 
 ```css
-@import "tachyons-grid";
+@import "tachyons-grid-layout";
 ```
 
 Then process the css using the [`tachyons-cli`](https://github.com/tachyons-css/tachyons-cli)
@@ -55,7 +55,7 @@ $ tachyons path/to/css-file.css > dist/t.css
 The easiest and most simple way to use the css is to use the cdn hosted version. Include it in the head of your html with:
 
 ```
-<link rel="stylesheet" href="http://unpkg.com/tachyons-grid@0.1.0/css/tachyons-grid.min.css" />
+<link rel="stylesheet" href="http://unpkg.com/tachyons-grid-layout@0.1.0/css/tachyons-grid-layout.min.css" />
 ```
 
 ##### Locally
@@ -63,7 +63,7 @@ The built css is located in the `css` directory. It contains an unminified and m
 You can either cut and paste that css or link to it directly in your html.
 
 ```html
-<link rel="stylesheet" href="path/to/module/css/tachyons-grid">
+<link rel="stylesheet" href="path/to/module/css/tachyons-grid-layout">
 ```
 
 #### Development
@@ -185,6 +185,57 @@ Running `$ npm start` will process the source css and place the built css in the
 
   GRID COLUMNS
 
+  Base
+    g = gap
+
+  Modifiers
+  COLUMN START
+    c = column
+    r = row
+
+    0 = none
+    1 = 1st step in spacing scale
+    2 = 2nd step in spacing scale
+    3 = 3rd step in spacing scale
+    4 = 4th step in spacing scale
+    5 = 5th step in spacing scale
+    6 = 6th step in spacing scale
+    7 = 7th step in spacing scale
+    7 = 7th line
+
+  Media Query Extensions:
+    -ns = not-small
+    -m  = medium
+    -l  = large
+
+*/
+.ga0 { gap: 0; }
+.ga1 { gap: .25rem; }
+  GRID COLUMNS
+.ga3 { gap: 1rem; }
+.ga4 { gap: 2rem; }
+.ga5 { gap: 4rem; }
+.column-start-7 { grid-column-start: 7; }
+.ga6 { gap: 8rem; }
+.gc0 { -webkit-column-gap: 0; column-gap: 0; }
+  COLUMN END
+.gc2 { -webkit-column-gap: .5rem; column-gap: .5rem; }
+.gc3 { -webkit-column-gap: 1rem; column-gap: 1rem; }
+.gc4 { -webkit-column-gap: 2rem; column-gap: 2rem; }
+.gc5 { -webkit-column-gap: 4rem; column-gap: 4rem; }
+.gc6 { -webkit-column-gap: 8rem; column-gap: 8rem; }
+.gr0 { row-gap: 0; }
+.gr1 { row-gap: .25rem; }
+.gr2 { row-gap: .5rem; }
+.gr3 { row-gap: 1rem; }
+.gr4 { row-gap: 2rem; }
+.gr5 { row-gap: 4rem; }
+    7 = 7th line
+.gr6 { row-gap: 8rem; }
+/*
+
+  GRID COLUMNS
+
   Base:
     grid-columns = grid-template-columns
 
@@ -193,9 +244,10 @@ Running `$ npm start` will process the source css and place the built css in the
     2 = 2 columns
     3 = 3 columns
     4 = 4 columns
+.column-end-7 { grid-column-end: 7; }
     5 = 5 columns
     6 = 6 columns
-
+  ROW START
   Media Query Extensions:
     -ns = not-small
     -m  = medium
@@ -207,6 +259,7 @@ Running `$ npm start` will process the source css and place the built css in the
 .grid-columns-2 { grid-template-columns: 1fr 1fr; }
 .grid-columns-3 { grid-template-columns: 1fr 1fr 1fr; }
 .grid-columns-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+    7 = 7th line
 .grid-columns-5 { grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
 .grid-columns-6 { grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; }
 /*
@@ -222,7 +275,7 @@ Running `$ npm start` will process the source css and place the built css in the
     2 = 2 rows
     3 = 3 rows
     4 = 4 rows
-    5 = 5 rows
+  ROW END
     6 = 6 rows
 
   Media Query Extensions:
@@ -234,6 +287,7 @@ Running `$ npm start` will process the source css and place the built css in the
 */
 .grid-rows-1 { grid-template-rows: 1fr; }
 .grid-rows-2 { grid-template-rows: 1fr 1fr; }
+    7 = 7th line
 .grid-rows-3 { grid-template-rows: 1fr 1fr 1fr; }
 .grid-rows-4 { grid-template-rows: 1fr 1fr 1fr 1fr; }
 .grid-rows-5 { grid-template-rows: 1fr 1fr 1fr 1fr 1fr; }
@@ -252,6 +306,27 @@ Running `$ npm start` will process the source css and place the built css in the
     3 = 3rd line
     4 = 4th line
     5 = 5th line
+ .ga0-ns { gap: 0; }
+ .ga1-ns { gap: .25rem; }
+ .ga2-ns { gap: .5rem; }
+ .ga3-ns { gap: 1rem; }
+ .ga4-ns { gap: 2rem; }
+ .ga5-ns { gap: 4rem; }
+ .ga6-ns { gap: 8rem; }
+ .gc0-ns { -webkit-column-gap: 0; column-gap: 0; }
+ .gc1-ns { -webkit-column-gap: .25rem; column-gap: .25rem; }
+ .gc2-ns { -webkit-column-gap: .5rem; column-gap: .5rem; }
+ .gc3-ns { -webkit-column-gap: 1rem; column-gap: 1rem; }
+ .gc4-ns { -webkit-column-gap: 2rem; column-gap: 2rem; }
+ .gc5-ns { -webkit-column-gap: 4rem; column-gap: 4rem; }
+ .gc6-ns { -webkit-column-gap: 8rem; column-gap: 8rem; }
+ .gr0-ns { row-gap: 0; }
+ .gr1-ns { row-gap: .25rem; }
+ .gr2-ns { row-gap: .5rem; }
+ .gr3-ns { row-gap: 1rem; }
+ .gr4-ns { row-gap: 2rem; }
+ .gr5-ns { row-gap: 4rem; }
+ .gr6-ns { row-gap: 8rem; }
     6 = 6th line
     7 = 7th line
 
@@ -270,12 +345,14 @@ Running `$ npm start` will process the source css and place the built css in the
 .column-start-6 { grid-column-start: 6; }
 .column-start-7 { grid-column-start: 7; }
 /*
+ .column-start-7-ns { grid-column-start: 7; }
 
   COLUMN END
 
   Base:
     column-end = grid-column-end
   ROW END
+ .column-end-7-ns { grid-column-end: 7; }
   Modifiers
     1 = 1st line
     2 = 2nd line
@@ -291,6 +368,27 @@ Running `$ npm start` will process the source css and place the built css in the
     -m  = medium
     -l  = large
 
+ .ga0-m { gap: 0; }
+ .ga1-m { gap: .25rem; }
+ .ga2-m { gap: .5rem; }
+ .ga3-m { gap: 1rem; }
+ .ga4-m { gap: 2rem; }
+ .ga5-m { gap: 4rem; }
+ .ga6-m { gap: 8rem; }
+ .gc0-m { -webkit-column-gap: 0; column-gap: 0; }
+ .gc1-m { -webkit-column-gap: .25rem; column-gap: .25rem; }
+ .gc2-m { -webkit-column-gap: .5rem; column-gap: .5rem; }
+ .gc3-m { -webkit-column-gap: 1rem; column-gap: 1rem; }
+ .gc4-m { -webkit-column-gap: 2rem; column-gap: 2rem; }
+ .gc5-m { -webkit-column-gap: 4rem; column-gap: 4rem; }
+ .gc6-m { -webkit-column-gap: 8rem; column-gap: 8rem; }
+ .gr0-m { row-gap: 0; }
+ .gr1-m { row-gap: .25rem; }
+ .gr2-m { row-gap: .5rem; }
+ .gr3-m { row-gap: 1rem; }
+ .gr4-m { row-gap: 2rem; }
+ .gr5-m { row-gap: 4rem; }
+ .gr6-m { row-gap: 8rem; }
 */
 .column-end-1 { grid-column-end: 1; }
 .column-end-2 { grid-column-end: 2; }
@@ -315,6 +413,7 @@ Running `$ npm start` will process the source css and place the built css in the
  .ga6-ns { gap: 8rem; }
  .gc0-ns { -webkit-column-gap: 0; column-gap: 0; }
  .gc1-ns { -webkit-column-gap: .25rem; column-gap: .25rem; }
+ .column-end-7-m { grid-column-end: 7; }
  .gc2-ns { -webkit-column-gap: .5rem; column-gap: .5rem; }
  .gc3-ns { -webkit-column-gap: 1rem; column-gap: 1rem; }
  .gc4-ns { -webkit-column-gap: 2rem; column-gap: 2rem; }
@@ -330,6 +429,27 @@ Running `$ npm start` will process the source css and place the built css in the
   Modifiers
     1 = 1st line
     2 = 2nd line
+ .ga0-l { gap: 0; }
+ .ga1-l { gap: .25rem; }
+ .ga2-l { gap: .5rem; }
+ .ga3-l { gap: 1rem; }
+ .ga4-l { gap: 2rem; }
+ .ga5-l { gap: 4rem; }
+ .ga6-l { gap: 8rem; }
+ .gc0-l { -webkit-column-gap: 0; column-gap: 0; }
+ .gc1-l { -webkit-column-gap: .25rem; column-gap: .25rem; }
+ .gc2-l { -webkit-column-gap: .5rem; column-gap: .5rem; }
+ .gc3-l { -webkit-column-gap: 1rem; column-gap: 1rem; }
+ .gc4-l { -webkit-column-gap: 2rem; column-gap: 2rem; }
+ .gc5-l { -webkit-column-gap: 4rem; column-gap: 4rem; }
+ .gc6-l { -webkit-column-gap: 8rem; column-gap: 8rem; }
+ .gr0-l { row-gap: 0; }
+ .gr1-l { row-gap: .25rem; }
+ .gr2-l { row-gap: .5rem; }
+ .gr3-l { row-gap: 1rem; }
+ .gr4-l { row-gap: 2rem; }
+ .gr5-l { row-gap: 4rem; }
+ .gr6-l { row-gap: 8rem; }
     3 = 3rd line
     4 = 4th line
     5 = 5th line
@@ -348,12 +468,14 @@ Running `$ npm start` will process the source css and place the built css in the
  .column-start-7-ns { grid-column-start: 7; }
 .row-start-4 { grid-row-start: 4; }
 .row-start-5 { grid-row-start: 5; }
+ .column-start-7-l { grid-column-start: 7; }
 .row-start-6 { grid-row-start: 6; }
 /*
 
   ROW END
  .column-end-7-ns { grid-column-end: 7; }
 
+ .column-end-7-l { grid-column-end: 7; }
   Base:
     row-end = grid-row-end
 
