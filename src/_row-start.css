@@ -1,6 +1,6 @@
 /*
 
-  GRID ROW START
+  ROW START
 
   Base:
     row-start = grid-row-start
@@ -12,6 +12,7 @@
     4 = 4th line
     5 = 5th line
     6 = 6th line
+    7 = 7th line
 
   Media Query Extensions:
     -ns = not-small

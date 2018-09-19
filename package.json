@@ -1,7 +1,7 @@
 {
   "name": "tachyons-grid",
-  "description": "Flexbox CSS module for Tachyons",
-  "version": "0.0.1",
+  "description": "CSS Grid module for Tachyons",
+  "version": "0.1.0",
   "author": {
     "name": "bobek-balinek",
     "email": "bobak.art@gmail.com",

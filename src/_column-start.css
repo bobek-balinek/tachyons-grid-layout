@@ -1,6 +1,6 @@
 /*
 
-  GRID COLUMN START
+  COLUMN START
 
   Base:
     column-start = grid-column-start
@@ -12,6 +12,7 @@
     4 = 4th line
     5 = 5th line
     6 = 6th line
+    7 = 7th line
 
   Media Query Extensions:
     -ns = not-small
@@ -26,6 +27,7 @@
 .column-start-4 { grid-column-start: 4; }
 .column-start-5 { grid-column-start: 5; }
 .column-start-6 { grid-column-start: 6; }
+.column-start-7 { grid-column-start: 7; }
 
 @media (--breakpoint-not-small) {
   .column-start-1-ns { grid-column-start: 1; }
@@ -34,6 +36,7 @@
   .column-start-4-ns { grid-column-start: 4; }
   .column-start-5-ns { grid-column-start: 5; }
   .column-start-6-ns { grid-column-start: 6; }
+  .column-start-7-ns { grid-column-start: 7; }
 }
 
 @media (--breakpoint-medium) {
@@ -52,4 +55,5 @@
   .column-start-4-l { grid-column-start: 4; }
   .column-start-5-l { grid-column-start: 5; }
   .column-start-6-l { grid-column-start: 6; }
+  .column-start-7-l { grid-column-start: 7; }
 }

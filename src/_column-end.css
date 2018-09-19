@@ -1,6 +1,6 @@
 /*
 
-  GRID COLUMN END
+  COLUMN END
 
   Base:
     column-end = grid-column-end
@@ -12,6 +12,7 @@
     4 = 4th line
     5 = 5th line
     6 = 6th line
+    7 = 7th line
 
   Media Query Extensions:
     -ns = not-small
@@ -26,6 +27,7 @@
 .column-end-4 { grid-column-end: 4; }
 .column-end-5 { grid-column-end: 5; }
 .column-end-6 { grid-column-end: 6; }
+.column-end-7 { grid-column-end: 7; }
 
 @media (--breakpoint-not-small) {
   .column-end-1-ns { grid-column-end: 1; }
@@ -34,6 +36,7 @@
   .column-end-4-ns { grid-column-end: 4; }
   .column-end-5-ns { grid-column-end: 5; }
   .column-end-6-ns { grid-column-end: 6; }
+  .column-end-7-ns { grid-column-end: 7; }
 }
 
 @media (--breakpoint-medium) {
@@ -43,6 +46,7 @@
   .column-end-4-m { grid-column-end: 4; }
   .column-end-5-m { grid-column-end: 5; }
   .column-end-6-m { grid-column-end: 6; }
+  .column-end-7-m { grid-column-end: 7; }
 }
 
 @media (--breakpoint-large) {
@@ -52,4 +56,5 @@
   .column-end-4-l { grid-column-end: 4; }
   .column-end-5-l { grid-column-end: 5; }
   .column-end-6-l { grid-column-end: 6; }
+  .column-end-7-l { grid-column-end: 7; }
 }
