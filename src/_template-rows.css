@@ -1,0 +1,55 @@
+/*
+
+  GRID TEMPLATE COLUMNS
+
+  Base:
+    grid-rows = grid-template-rows
+
+  Modifiers
+    1 = 1 rows
+    2 = 2 rows
+    3 = 3 rows
+    4 = 4 rows
+    5 = 5 rows
+    6 = 6 rows
+
+  Media Query Extensions:
+    -ns = not-small
+    -m  = medium
+    -l  = large
+
+*/
+
+.grid-rows-1 { grid-template-rows: 1fr }
+.grid-rows-2 { grid-template-rows: 1fr 1fr }
+.grid-rows-3 { grid-template-rows: 1fr 1fr 1fr }
+.grid-rows-4 { grid-template-rows: 1fr 1fr 1fr 1fr }
+.grid-rows-5 { grid-template-rows: 1fr 1fr 1fr 1fr 1fr }
+.grid-rows-6 { grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr }
+
+@media (--breakpoint-not-small) {
+  .grid-rows-1-ns { grid-template-rows: 1fr }
+  .grid-rows-2-ns { grid-template-rows: 1fr 1fr }
+  .grid-rows-3-ns { grid-template-rows: 1fr 1fr 1fr }
+  .grid-rows-4-ns { grid-template-rows: 1fr 1fr 1fr 1fr }
+  .grid-rows-5-ns { grid-template-rows: 1fr 1fr 1fr 1fr 1fr }
+  .grid-rows-6-ns { grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr }
+}
+
+@media (--breakpoint-medium) {
+  .grid-rows-1-m { grid-template-rows: 1fr }
+  .grid-rows-2-m { grid-template-rows: 1fr 1fr }
+  .grid-rows-3-m { grid-template-rows: 1fr 1fr 1fr }
+  .grid-rows-4-m { grid-template-rows: 1fr 1fr 1fr 1fr }
+  .grid-rows-5-m { grid-template-rows: 1fr 1fr 1fr 1fr 1fr }
+  .grid-rows-6-m { grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr }
+}
+
+@media (--breakpoint-large) {
+  .grid-rows-1-l { grid-template-rows: 1fr }
+  .grid-rows-2-l { grid-template-rows: 1fr 1fr }
+  .grid-rows-3-l { grid-template-rows: 1fr 1fr 1fr }
+  .grid-rows-4-l { grid-template-rows: 1fr 1fr 1fr 1fr }
+  .grid-rows-5-l { grid-template-rows: 1fr 1fr 1fr 1fr 1fr }
+  .grid-rows-6-l { grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr }
+}

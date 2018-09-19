@@ -1,0 +1,36 @@
+{
+  "name": "tachyons-grid",
+  "description": "Flexbox CSS module for Tachyons",
+  "version": "2.1.0",
+  "author": {
+    "name": "bobek-balinek",
+    "email": "bobak.art@gmail.com",
+    "url": "https://github.com/bobek-balinek"
+  },
+  "style": "src/tachyons-grid.css",
+  "main": "src/tachyons-grid.css",
+  "files": [
+    "src",
+    "css"
+  ],
+  "keywords": [
+    "tachyons",
+    "tachyons-css",
+    "css",
+    "grid"
+  ],
+  "repository": "tachyons-css/tachyons-grid",
+  "license": "ISC",
+  "devDependencies": {
+    "tachyons-cli": "^1.0.10",
+    "watch": "^1.0.1"
+  },
+  "scripts": {
+    "start": "npm run build:watch",
+    "build:css": "tachyons src/tachyons-grid.css > css/tachyons-grid.css",
+    "build:minify": "tachyons src/tachyons-grid.css --minify > css/tachyons-grid.min.css",
+    "build:docs": "tachyons src/tachyons-grid.css --generate-docs --package=../../package.json > readme.md",
+    "build": "npm run build:css && npm run build:minify && npm run build:docs",
+    "build:watch": "watch 'npm run build' ./src"
+  }
+}

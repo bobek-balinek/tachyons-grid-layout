@@ -1,0 +1,24 @@
+/*
+
+  GRID
+
+  Media Query Extensions:
+    -ns = not-small
+    -m  = medium
+    -l  = large
+
+*/
+
+.grid { display: grid; }
+
+@media (--breakpoint-not-small) {
+  .grid-ns { display: grid; }
+}
+
+@media (--breakpoint-medium) {
+  .grid-m { display: grid; }
+}
+
+@media (--breakpoint-large) {
+  .grid-l { display: grid; }
+}
